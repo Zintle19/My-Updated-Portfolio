@@ -1,0 +1,278 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: url(./imgs/backgound\ image.jpg) no-repeat center center fixed; /* Full background image */
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    color: rgb(36, 32, 30); /* Consistent text color */
+}
+
+/* Navbar Styling */
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: rgba(248, 249, 250, 0.8); /* Transparent background for navbar */
+    position: fixed; /* Fix navbar at the top */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.navbar .logo {
+    width: 160px;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+ul li {
+    margin: 0 15px;
+}
+
+ul li a {
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: darkslategray;
+    transition: color 0.3s, transform 0.2s;
+}
+
+ul li a:hover {
+    color: rgb(230, 104, 59);
+    transform: scale(1.1);
+}
+
+/* Main Info Section */
+.info {
+    margin-left: 7%;
+    margin-top: 12%; /* Adjusted for fixed navbar */
+    color: white; /* Text color for visibility on background */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Add subtle shadow for text */
+}
+
+.info h1 {
+    font-size: 65px;
+    color: white;
+}
+
+.info h3 {
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 24px;
+}
+
+.info span {
+    color: rgb(230, 104, 59);
+}
+
+.info a {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(36, 32, 30, 0.9);
+    margin: 26px 0;
+    padding: 10px 18px;
+    border-radius: 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.info a:hover {
+    background: rgba(59, 174, 209);
+}
+
+/* Image Section */
+.image {
+    width: 30%;
+    height: 60%;
+    position: absolute;
+    right: 100px;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.image img {
+    position: absolute;
+    height: 140%;
+    left: 40%;
+    transform: translate(-50%, 0) scale(1);
+    bottom: 0;
+    transition: transform 1.5s ease-in-out;
+}
+
+.image:hover img {
+    transform: translate(-40%, 0) scale(1.1);
+}
+
+/* Section Styling */
+.block {
+    margin: 50px auto; /* Space between sections */
+    padding: 20px 50px; /* Padding inside sections */
+    background-color: rgba(255, 218, 185, 0.9); /* Transparent peach */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Center sections with defined width */
+}
+
+/* Section Titles */
+.block h2 {
+    font-size: 28px;
+    color: rgb(36, 32, 30);
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(36, 32, 30, 0.5);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Paragraphs in Sections */
+.block p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/* Skills Section */
+#skills .skills-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#skills .skills-grid .skill-card {
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    min-width: 120px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#skills .skills-grid .skill-card:hover {
+    background-color: rgba(59, 174, 209);
+}
+
+/* Work Experience Section */
+#work-experience .experience-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#work-experience .experience-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#work-experience .experience-item p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Projects Section */
+#projects .projects-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#projects .project-card {
+    background: gray;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+#projects .project-card:hover {
+    transform: scale(1.05);
+    background-color: rgba(59, 174, 209);
+}
+
+/* Contact Section */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact form input,
+#contact form textarea,
+#contact form button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+#contact form button {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#contact form button:hover {
+    background-color: rgba(59, 174, 209);
+}
+
+/* Social Links */
+.social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    background-color: rgba(255, 218, 185, 0.9);
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+    color: darkslategray;
+    font-size: 14px;
+    border-top: 2px solid rgba(36, 32, 30, 0.5);
+}
