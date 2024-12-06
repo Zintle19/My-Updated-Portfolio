@@ -1,0 +1,51 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.about-section {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+h2 {
+    color: #4CAF50;
+}

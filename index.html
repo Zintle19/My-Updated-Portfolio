@@ -1,127 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <title>My Portfolio</title>
-      <link rel="stylesheet" href="style.css">
-   </head>
-   <body>
-      <div class="main">
-         <div class="navbar">
-            <img src="" class="logo">
-            <ul>
-              <li><a href="#about">ABOUT</a></li>
-              <li><a href="#skills">SKILLS</a></li>
-              <li><a href="#work-experience">WORK EXPERIENCE</a></li>
-              <li><a href="#projects">MY PROJECTS</a></li>
-              <li><a href="#contact">CONTACT</a></li>
-            </ul>
-         </div>
-         <div class="info">
-            <h3>Hi, I'm <span>Zintle</span></h3>
-            <h1><span>W</span>eb <span>D</span>esigner|<span>S</span>oftware <span>D</span>eveloper|<span>T</span>ech <span>E</span>xplorer</h1>
-            <h3>A web and software developer from Port Elizabeth, Eastern Cape.<br>I create websites and develop applications using programming languages.</h3>
-            <a href="#contact">Hire Me</a>
-         </div>
-         <div class="image">
-            <img src="" class="girl" alt="Portfolio Image">
-         </div>
-         <div class="icons">
-            <a href="https://www.linkedin.com/in/zintle-dyesi-189544336"><ion-icon name="logo-linkedin"></ion-icon></a>
-         </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script defer>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll("section");
+            sections.forEach(section => section.style.display = "none");
+            document.getElementById(sectionId).style.display = "block";
+        }
 
-         <!-- About Section -->
-         <section id="about" class="block" style="background-color: peach; padding: 20px;">
+        document.addEventListener("DOMContentLoaded", () => {
+            showSection("info"); // Display the home section by default
+        });
+    </script>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <ul>
+            <li><a href="#" onclick="showSection('info')">Home</a></li>
+            <li><a href="#" onclick="showSection('about')">About</a></li>
+            <li><a href="#" onclick="showSection('skills')">Skills</a></li>
+            <li><a href="#" onclick="showSection('work-experience')">Work Experience</a></li>
+            <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+            <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Introduction Section -->
+    <section id="info" class="info-section">
+        <div class="info-content">
+            <h3>Hi, I'm <span>Zintle</span></h3>
+            <h1><span>W</span>eb <span>D</span>esigner | <span>S</span>oftware <span>D</span>eveloper | <span>T</span>ech <span>E</span>xplorer</h1>
+            <h3>
+                A web and software developer from Port Elizabeth, Eastern Cape.<br>
+                I create websites and develop applications using programming languages.
+            </h3>
+            <a href="#" class="button-animated" onclick="showSection('contact')">Hire Me</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="block" style="display: none;">
+        <div class="about-container">
             <h2>About Me</h2>
             <p>
-               I am a highly motivated software developer currently pursuing the Systems Software Developer learnership at CAPACITI. 
-               I have an equitable foundation in web development and programming, with hands-on experience in both a software project 
-               and a web application project. My technical skills include JavaScript, Python, HTML, CSS, and the Django web framework.
+                I am a highly motivated software developer currently pursuing the Systems Software Developer learnership at CAPACITI.
+                I genuinely enjoy the creative process of building meaningful applications that solve real-world problems. With
+                hands-on experience in web and software development, I have worked with languages like JavaScript, Python, HTML, CSS,
+                and Django to bring ideas to life.
             </p>
             <p>
-               Currently, I am studying and exploring Machine Learning to further expand my skill set. I am passionate about continuous 
-               learning and applying my knowledge to real-world projects, particularly in creating intuitive and user-friendly applications. 
-               Additionally, I have experience in educational technology, having worked as an Edutech coach, where I developed skills in 
-               both tech and teaching.
+                Lately, I have been diving into the exciting world of Machine Learning, eager to expand my horizons and discover how
+                technology can make an even bigger impact on people's lives. I am passionate about continuous learning—not just for
+                the sake of knowledge but because I believe there is always a better way to create, improve, and connect.
             </p>
-         </section>
+            <p>
+                Beyond coding, I value crafting user-friendly applications that not only work well but also resonate with people,
+                making their lives a little easier or more enjoyable. For me, it is all about blending technical skills with a
+                personal touch.
+            </p>
+        </div>
+    </section>
 
-         <!-- Skills Section -->
-         <section id="skills" class="block" style="background-color: peach; padding: 20px;">
-            <h2>Skills</h2>
-            <div class="skills-grid" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-               <div class="skill-card">HTML</div>
-               <div class="skill-card">CSS</div>
-               <div class="skill-card">JavaScript</div>
-               <div class="skill-card">Python</div>
-               <div class="skill-card">Django</div>
-               <div class="skill-card">Java</div>
+    <!-- Skills Section -->
+    <section id="skills" class="block" style="display: none;">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card"><img src="./HTML.jpg" alt="HTML"><p>HTML</p></div>
+            <div class="skill-card"><img src="./CSS3.jpg" alt="CSS"><p>CSS</p></div>
+            <div class="skill-card"><img src="./JavaScript.png" alt="JavaScript"><p>JavaScript</p></div>
+            <div class="skill-card"><img src="./Python and Django.png" alt="Python"><p>Python & Django</p></div>
+            <div class="skill-card"><img src="./Java.png" alt="Java"><p>Java</p></div>
+            <div class="skill-card"><img src="./artificial intelligence.jpg" alt="AI"><p>Artificial Intelligence</p></div>
+            <div class="skill-card"><img src="./machine learning.jpg" alt="AI"><p>Machine Learning</p></div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="work-experience" class="block" style="display: none;">
+        <h2>Work Experience</h2>
+        <div class="experience-item">
+            <h3>Software Developer</h3>
+            <p><strong>2024 - Present</strong></p>
+            <p>CAPACITI Systems Software Developer Learnership</p>
+            <p>Developed various projects, gaining experience in web and software development using technologies like Django and Python.</p>
+        </div>
+        <div class="experience-item">
+            <h3>Edutech Coach</h3>
+            <p><strong>February 2024 - July 2024</strong></p>
+            <p>Masinyusane Development Organisation</p>
+            <p>Delivered technology-based education solutions and assisted students with digital learning tools.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="block" style="display: none;">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Fitness Tracker App</h3>
+                <a href="https://github.com/Zintle19/Titans-Fitness-Application.git" target="_blank">View Project</a>
+                <p>A desktop app to track fitness goals and exercises.</p>
             </div>
-         </section>
-
-         <!-- Work Experience Section -->
-         <section id="work-experience" class="block" style="background-color: peach; padding: 20px;">
-            <h2>Work Experience</h2>
-            <div class="work-experience">
-               <div class="experience-item">
-                  <h3>Software Developer</h3>
-                  <p><strong>2024-Present</strong></p>
-                  <p>CAPACITI Systems Software Developer Learnership</p>
-                  <p>Working on various projects as part of the learnership, gaining hands-on experience in web and software development using languages like JavaScript, Python, HTML, CSS, and the Django web framework.</p>
-               </div>
-               <div class="experience-item">
-                  <h3>Edutech Coach</h3>
-                  <p><strong>February 2024 - 30 July 2024</strong></p>
-                  <p>Masinyusane Development Organisation</p>
-                  <p>Delivered technology-based education solutions, helping students and educators incorporate digital tools into their learning processes.</p>
-               </div>
+            <div class="project-card">
+                <h3>Fruit and Veggie Delight</h3>
+                <a href="https://zintle19.github.io/Fruit-and-Veggie/" target="_blank">View Project</a>
+                <p>A vibrant website showcasing healthy products.</p>
             </div>
-         </section>
-
-         <!-- Projects Section -->
-         <section id="projects" class="block" style="background-color: peach; padding: 20px;">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-               <div class="project-card">
-                  <h3>Fitness Tracker App</h3>
-                  <a href="https://github.com/Zintle19/Titans-Fitness-Application.git" class="project-link" target="_blank">
-                     <img src="" alt="Fitness Tracker App">
-                  </a>
-                  <p>A desktop app that allows users to track their fitness goals with custom interfaces and workout inspiration.</p>
-               </div>
-               <div class="project-card">
-                  <h3>Fruit and Veggie Delight</h3>
-                  <a href="https://github.com/Zintle19/Fruit-and-Veggie.git" class="project-link" target="_blank">
-                     <img src="" alt="Fruit and Veggie Delight Website">
-                  </a>
-                  <p>A website showcasing nutritious and healthy products and recipes with a vibrant, user-friendly design.</p>
-               </div>
+            <div class="project-card">
+                <h3>Mental Health AI Application</h3>
+                <a href="https://github.com/Zintle19/Mental-Health-AI-Application.git" target="_blank">View Project</a>
+                <p>An AI-powered mental health support tool.</p>
             </div>
-         </section>
+        </div>
+    </section>
 
-         <!-- Contact Section -->
-         <section id="contact" class="block" style="background-color: peach; padding: 20px;">
-            <h2>Contact Me</h2>
-            <form>
-               <input type="text" name="name" placeholder="Your Name" required>
-               <input type="email" name="email" placeholder="Your Email" required>
-               <textarea name="message" placeholder="Your Message" required></textarea>
-               <button type="submit">Send Message</button>
-            </form>
-            <div class="social-links">
-               <a href="https://www.linkedin.com/in/zintle-dyesi-189544336/" target="_blank">
-                  <img src="./imgs/LinkedIn icon.png" alt="LinkedIn Icon">
-               </a>
-               <a href="mailto:dyesizintle66@gmail.com">
-                  <img src="./imgs/email icon.png" alt="Email Icon">
-               </a>
-            </div>
-         </section>
-
-         <!-- Footer -->
-         <footer>
-            <p>© 2024 Zintle - The Tech Titan. All rights reserved.</p>
-         </footer>
-      </div>
-      <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-   </body>
+    <!-- Contact Section -->
+    <section id="contact" class="block" style="display: none;">
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/f/mnnqwbge" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/zintle-dyesi-189544336/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/Zintle19" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </section>
+</body>
 </html>
